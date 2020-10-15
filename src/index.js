@@ -12,12 +12,12 @@ app.get('/users', function(req,res) {
     res.send(user)
 })
 
-app.post('/users', function(req,res) {
+app.post('/user', function(req,res) {
     user.push({ id: 0  })
     res.json(user[0])
 })
 
-app.get('/users/:id', function(req,res) {
+app.get('/user/:id', function(req,res) {
     res.json(user[0])
 })
 
