@@ -9,11 +9,11 @@ app.get('/', function(req,res) {
 })
 
 app.get('/users', function(req,res) {
-    res.send(user[0])
+    res.send(user)
 })
 
 app.post('/users', function(req,res) {
-    user.push({id: 0})
+    user.push({ id: 0 })
     res.json(user[0])
 })
 
