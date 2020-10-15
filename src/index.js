@@ -23,10 +23,10 @@ app.get('/user/:id', function(req,res) {
 
 app.delete('/user/:id', function(req,res) {
     if (user.length==0) {
-        res.status(204)
+        res.status(204).send()
     } else {
         res.json(user[0])
-        res.status(202)
+        res.status(202).send()
     }
 })
 
