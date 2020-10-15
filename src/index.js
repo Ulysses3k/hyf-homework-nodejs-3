@@ -13,7 +13,7 @@ app.get('/users', function(req,res) {
 })
 
 app.post('/users', function(req,res) {
-    user.push({id: 0 })
+    user.push({ id: 0  })
     res.json(user[0])
 })
 
