@@ -26,6 +26,7 @@ app.delete('/user/:id', function(req,res) {
         res.status(204)
     } else {
         res.json(user[0])
+        res.status(202)
     }
 })
 
