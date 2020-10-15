@@ -6,4 +6,8 @@ app.get('/', function(req,res) {
     res.send('Hello World!')
 })
 
+app.get('/users', function(req,res) {
+    res.send([])
+})
+
 app.listen(port,function(){console.log('server is running')})
