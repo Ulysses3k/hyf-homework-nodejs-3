@@ -9,16 +9,16 @@ app.get('/', function(req,res) {
 })
 
 app.get('/users', function(req,res) {
-    res.send(user)
+    res.send(user[0])
 })
 
 app.post('/users', function(req,res) {
     user.push({id: 0})
-    res.json(user)
+    res.json(user[0])
 })
 
 app.get('/users/:id', function(req,res) {
-    res.json(user)
+    res.json(user[0])
 })
 
 app.listen(port,function(){console.log('server is running')})
