@@ -18,14 +18,14 @@ app.post('/user', function(req,res) {
 })
 
 app.get('/user/:id', function(req,res) {
-    res.json(user[0])
+    res.json(user[req.params.id])
 })
 
 app.delete('/user/:id', function(req,res) {
-    if (user.length==0) {
+    if (user.length===0) {
         res.status(204).send()
     } else {
-        res.json(user[0])
+        user.splice(req.params.id,1)
         res.status(202).send()
     }
 })
